@@ -189,23 +189,25 @@
         }
 
         .download-btn {
-            background: #28a745;
-            color: white;
+            background: #ff8800;
+            color: #1a1a1a;
             border: none;
             padding: 10px 25px;
             border-radius: 20px;
             cursor: pointer;
+            font-weight: bold;
             text-decoration: none;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
             display: inline-block;
         }
 
         .download-btn:hover {
-            background: #218838;
+            background: #ffaa44;
+            transform: scale(1.05);
         }
 
         .redux-content h2 {
-            color: #667eea;
+            color: #ff8800;
             margin-bottom: 30px;
             font-size: 2em;
         }
@@ -278,20 +280,18 @@
             <div class="redux-content">
                 <h2>📦 Доступные редуксы</h2>
                 
-                <!-- PLACE YOUR REDUX ARCHIVES HERE -->
-                <!-- To add redux files:
-                     1. Create a 'downloads' folder in the same directory as this HTML file
-                     2. Put your .rar files in the 'downloads' folder
-                     3. Update the href and file information below
+                <!-- PLACE YOUR REDUX LINKS HERE -->
+                <!-- To add redux links:
+                     Simply update the href with your download link (Google Drive, Dropbox, Mega, etc.)
                 -->
                 <ul class="redux-list">
-                    <!-- Example redux items - replace with your own -->
+                    <!-- Example redux items - replace with your own links -->
                     <li class="redux-item">
                         <div>
                             <span class="redux-name">Redux Pack v1.0</span>
                             <span class="redux-size">(15 MB)</span>
                         </div>
-                        <a href="downloads/redux_v1.rar" class="download-btn" download>Скачать</a>
+                        <a href="https://drive.google.com/file/d/YOUR_FILE_ID/view" target="_blank" class="download-btn">Скачать</a>
                     </li>
 
                     <li class="redux-item">
@@ -299,7 +299,7 @@
                             <span class="redux-name">Redux Pack v2.0</span>
                             <span class="redux-size">(23 MB)</span>
                         </div>
-                        <a href="downloads/redux_v2.rar" class="download-btn" download>Скачать</a>
+                        <a href="https://www.dropbox.com/s/YOUR_LINK" target="_blank" class="download-btn">Скачать</a>
                     </li>
 
                     <li class="redux-item">
@@ -307,7 +307,7 @@
                             <span class="redux-name">Redux Ultimate Collection</span>
                             <span class="redux-size">(45 MB)</span>
                         </div>
-                        <a href="downloads/redux_ultimate.rar" class="download-btn" download>Скачать</a>
+                        <a href="https://mega.nz/file/YOUR_FILE" target="_blank" class="download-btn">Скачать</a>
                     </li>
 
                     <!-- Add more redux items by copying the <li> block above -->
@@ -317,7 +317,7 @@
                             <span class="redux-name">Your Redux Name</span>
                             <span class="redux-size">(Size)</span>
                         </div>
-                        <a href="downloads/your-file.rar" class="download-btn" download>Скачать</a>
+                        <a href="YOUR_DOWNLOAD_LINK" target="_blank" class="download-btn">Скачать</a>
                     </li>
                     -->
                 </ul>
