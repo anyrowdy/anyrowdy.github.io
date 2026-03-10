@@ -147,11 +147,67 @@
             border: 2px solid #ff8800;
             box-shadow: 0 5px 15px rgba(255, 136, 0, 0.3);
             transition: transform 0.3s, border-color 0.3s;
+            cursor: pointer;
         }
 
         .fishing-images img:hover {
             transform: scale(1.05);
             border-color: #ffaa44;
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            border: 3px solid #ff8800;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(255, 136, 0, 0.5);
+            animation: zoomIn 0.3s;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #ff8800;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            z-index: 1001;
+        }
+
+        .lightbox-close:hover {
+            color: #ffaa44;
         }
 
         .redux-list {
@@ -263,10 +319,10 @@
                 -->
                 <div class="fishing-images">
                     <!-- Example images - replace with your own -->
-                    <img src="images/fishing1.png" alt="Рыбалка 1" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+1'">
-                    <img src="images/fishing2.png" alt="Рыбалка 2" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+2'">
-                    <!--img src="images/fishing3.jpg" alt="Рыбалка 3" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+3'">
-                    <!--<img src="images/fishing4.jpg" alt="Рыбалка 4" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+4'">
+                    <img src="images/fishing1.jpg" alt="Рыбалка 1" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+1'">
+                    <img src="images/fishing2.jpg" alt="Рыбалка 2" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+2'">
+                    <img src="images/fishing3.jpg" alt="Рыбалка 3" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+3'">
+                    <img src="images/fishing4.jpg" alt="Рыбалка 4" onerror="this.src='https://via.placeholder.com/400x300?text=Фото+4'">
                     
                     <!-- Add more images by copying the line above and changing the src -->
                 </div>
